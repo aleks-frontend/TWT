@@ -1,0 +1,275 @@
+/*   
+
+General Class categories (naming conventions):
+
+    1) LAYOUT
+        - all the styling referring to the page layout and structure
+        - these classes must start with '.l-' (example: '.l-header')
+
+    3) MODULE
+        - independent components that are (or can be) used widely in all the pages and all the sections of the pages
+        - these classes must start with '.m-'
+        - important thing is that all module's inner element's classes that are specific only for this module, 
+          should also start with '.m-[parent_module]'. This way we will keep all the module specific styling in one place 
+       	  and will be easier for code maintenance and later expanding.
+       	- all the media queries for responsive styles should also come right after the module styling (again keeping all the
+       	  module specific styling in one place).
+    
+    3) UTILITY 
+        - single purpose helper classes that apply only one specific styling rule
+        - these classes must start with '.u-' (example: '.u-txt-center', '.u-pull-right', '.u-half-width'...)
+
+    4) STATE
+        - helper classes that modify the state of a component
+        - state classes should be added and removed via JS events
+        - only place where '!important' tag is allowed
+        - these classes must start with '.is-' (example: is-expanded/is-collapsed, is-hidden, is-active)
+_______________________
+
+*/
+
+/* General styling */
+
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.l-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+/* Main Header styling */
+
+.l-main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid #bebebe;
+  z-index: 9999;
+}
+
+.l-main-header-top {
+  overflow: hidden;
+  padding: 13px 0;
+  background: #1a1a1a;
+  border-bottom: 1px solid #9a9a9a;
+}
+
+.l-main-header-top + .l-container {
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+/* Social icons Module Styling */
+
+.m-social-icons {
+  float: left;
+}
+
+.m-social-icons li {
+  display: inline-block;
+  margin: 0 25px 0 0;
+}
+
+.m-social-icons li a {
+  color: #808080;
+}
+
+.m-social-icons li a:hover {
+  opacity: 0.8;
+}
+
+/* Contact menu Module Styling */
+
+.m-contact-menu {
+  float: right;
+}
+
+.m-contact-menu li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.m-contact-menu li a {
+  font-size: 12px;
+  color: #808080;
+}
+
+.m-contact-menu li a:hover {
+  opacity: 0.8;
+}
+
+.m-contact-menu li a i.m-icon {
+  margin-right: 7px;
+}
+
+/* Logo module styling */
+
+.m-logo {
+  position: absolute;
+  left: 0;
+  top: 21px;
+}
+
+/* Main navigation Module styling */
+
+.m-main-navigation {
+  float: right;
+}
+
+.m-main-navigation ul li {
+  display: inline-block;
+  margin: 0 0 0 38px;
+}
+
+.m-main-navigation-item a {
+  font-size: 14px;
+  color: #9a9a9a;
+  text-transform: uppercase;
+}
+
+.m-main-navigation-item a:hover {
+  color: #a31e22;
+}
+
+.is-active-m-main-navigation-item a {
+  font-weight: 700;
+  color: #a31e22;
+}
+
+/* Icon Module styling */
+
+.m-icon {
+  display: inline-block;
+  line-height: 0;
+  vertical-align: bottom;
+  background: url(img/icons-sprite.png) no-repeat;
+}
+
+.m-icon-17 {
+  width: 17px;
+  height: 17px;
+}
+
+.m-icon-phone {
+  background-position: 0 0;
+}
+
+.m-icon-email {
+  background-position: 0 -17px;
+}
+
+/* Hero Module styling */
+
+.m-hero {
+  position: relative;
+  margin-top: 43px;
+  padding: 275px 0 0;
+  height: 805px;
+  background: url(img/hero-bg.jpg) no-repeat bottom center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.m-hero-container {
+  height: 100%;
+}
+
+.m-hero-content {
+  width: 600px;
+}
+
+.m-hero-content-headline {
+  display: block;
+  font-size: 48.44px;
+  line-height: 1.1em;
+  color: #fff;
+}
+
+.m-hero-content-headline + .m-btn {
+  margin-top: 45px;
+}
+
+.m-hero-parallax-rocket {
+  position: absolute;
+  bottom: -130px;
+  left: 635px;
+}
+
+.m-hero-parallax-clouds {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  bottom: -130px;
+  height: 292px;
+  width: 100%;
+}
+
+.m-hero-parallax-clouds img {
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+/* Universal Button Module styling */
+
+.m-btn {
+  display: inline-block;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  background: #a31e22;
+  border: 1px solid #a31e22;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.m-btn:hover {
+  opacity: 0.8;
+}
+
+.m-btn-lg {
+  padding: 20px 50px;
+  font-size: 15px;
+}
+
+.m-btn-default {
+  padding: 15px 0;
+  width: 200px;
+  font-size: 14px;
+}
+
+.m-btn-transparent {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.m-btn-full-width {
+  width: 100%;
+}
+
+/* Utility helper classes */
+
+.u-color-red {
+  color: #a31e22;
+}
+
+.u-font-bold {
+  font-weight: 700;
+}
