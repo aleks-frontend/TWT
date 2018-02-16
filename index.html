@@ -15,21 +15,25 @@
 		<script src="https://cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js"></script>
 	<![endif]-->
 
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css" type="text/css" />
+	<!-- BxSlider CSS file -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<!-- FancyBox CSS file -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="css/master.css" type="text/css" />	
 </head>
 <body>	
 	<header class="l-main-header">
 		<div class="l-main-header-top">
 			<div class="l-container">
-				<ul class="m-social-icons">
+				<ul class="m-social-icons-primary">
 					<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
 					<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-				</ul><!-- end m-social-icons -->
+				</ul><!-- end m-social-icons-primary -->
 				<ul class="m-contact-menu">
 					<li><a href="#"><i class="m-icon m-icon-17 m-icon-phone"></i> 0800 000 1234</a></li>
 					<li><a href="#"><i class="m-icon m-icon-17 m-icon-email"></i> example@email.com</a></li>
@@ -40,20 +44,20 @@
 			<a href="#" class="m-logo"><img src="images/logo.png" alt="Logo" /></a>
 			<nav class="m-main-navigation">
 				<ul>
-					<li class="m-main-navigation-item is-active-m-main-navigation-item"><a href="#">Home</a></li>
-					<li class="m-main-navigation-item"><a href="#">Services</a></li>
-					<li class="m-main-navigation-item"><a href="#">News</a></li>
-					<li class="m-main-navigation-item"><a href="#">Jobs</a></li>
-					<li class="m-main-navigation-item"><a href="#">Contact Us</a></li>					
+					<li data-section-id="home-section" class="m-main-navigation-item is-active-m-main-navigation-item"><a href="#">Home</a></li>
+					<li data-section-id="services-section" class="m-main-navigation-item"><a href="#">Services</a></li>
+					<li data-section-id="news-section" class="m-main-navigation-item"><a href="#">News</a></li>
+					<li data-section-id="jobs-section" class="m-main-navigation-item"><a href="#">Jobs</a></li>
+					<li data-section-id="contact-section" class="m-main-navigation-item"><a href="#">Contact Us</a></li>					
 				</ul>
 			</nav><!-- end m-main-navigation -->
 		</div><!-- end l-container -->
 	</header>
 
-	<section class="l-fullscreen m-hero">
+	<div class="l-fullscreen m-hero" id="home-section">
 		<div class="l-container m-hero-container">
 			<div class="m-hero-content">
-				<span class="m-hero-content-headline u-color-red u-font-bold">Hosting Services Of</span>
+				<span class="m-hero-content-headline u-color-red"><strong>Hosting Services Of</strong></span>
 				<span class="m-hero-content-headline">Crypto-currency Mining</span>
 				<a href="#" class="m-btn m-btn-default">More details</a>
 			</div><!-- end m-hero-content -->
@@ -62,8 +66,387 @@
 		<div class="m-hero-parallax-clouds">
 			<img src="images/clouds.png" alt="Rocket" />
 		</div><!-- end m-hero-parallax-clouds -->
+	</div>
+
+	<section class="l -section u-padding-top-none">
+		<div class="l-container">
+			<h1>About</h1>
+			<h2><span>Teslawatt.llc</span></h2>
+			<div class="l-grid-primary u-margin-top-big">
+				<div class="l-grid-primary-item l-grid-primary-60">
+					<p>
+						TeslaWatt started in a garage in Silicon Valley in May 2017. Vladimir Radovic with several friends started mining operations with 9 GPU mining rigs and 6 graphic cards in each. Very soon he realized that hosting at home was not such a great idea especially in residential areas. Later that year, in September, he decided to buy property for his first datacenter in Gardnerville, Nevada, a small town close to Lake Tahoe. The company operated under the name CERAD llc as a temporary code name until all the preparation work was done for a new and modern company - TeslaWatt llc. 
+					</p>
+					<p>
+						Cerad llc officially changed its name in January 2018.<br />
+TeslaWatt own the property free and clear for the datacenter in Nevada.<br /> TeslaWatt currently has an offshore team in Europe. The company is looking to expand its capacities by securing another location in 2018.
+					</p>
+				</div><!-- end l-grid-primary-60 -->
+				<div class="l-grid-primary-item l-grid-primary-40 u-text-right">
+					<img src="images/servers-operator.jpg" alt="Servers" />
+				</div><!-- end l-grid-primary-40 -->
+			</div><!-- end l-grid-primary -->
+		</div><!-- end l-container -->
 	</section>
+
+	<section class="l-section l-section-smaller u-background-gray">
+		<div class="l-container">
+			<h1>What would be</h1>
+			<h2><span>THE steps to do the business with us?</span></h2>
+			<ul class="m-steps-graph">
+				<li class="m-steps-graph-step">
+					<span class="m-steps-graph-step-label">Step 1</span><!-- end m-steps-graph-step-label -->
+					<div class="m-steps-graph-step-illustration">
+						<img src="images/mouse-icon.png" alt="Step One Illustration" />
+					</div><!-- end m-steps-graph-step-illustration -->
+					<div class="m-steps-graph-step-description">
+						Choose the type of service that best suits your business needs. 
+					</div><!-- end m-steps-graph-step-description -->
+				</li>
+				<li class="m-steps-graph-step">
+					<span class="m-steps-graph-step-label">Step 2</span><!-- end m-steps-graph-step-label -->
+					<div class="m-steps-graph-step-description m-steps-graph-step-description-is-above">
+						Please contact us in order to sign agreement via DocuSign
+					</div><!-- end m-steps-graph-step-description -->
+					<div class="m-steps-graph-step-illustration m-steps-graph-step-illustration-is-bellow">
+						<img src="images/email-icon.png" alt="Step Two Illustration" />
+					</div><!-- end m-steps-graph-step-illustration -->
+				</li>
+				<li class="m-steps-graph-step">
+					<span class="m-steps-graph-step-label">Step 3</span><!-- end m-steps-graph-step-label -->
+					<div class="m-steps-graph-step-illustration">
+						<img src="images/equipment-icon.png" alt="Step Three Illustration" />
+					</div><!-- end m-steps-graph-step-illustration -->
+					<div class="m-steps-graph-step-description">
+						Send us your equipment and receive notification about 
+					</div><!-- end m-steps-graph-step-description -->
+				</li>
+			</ul><!-- end m-steps-graph -->
+		</div><!-- end l-container -->
+	</section>
+
+	<section class="l-section" id="services-section">
+		<div class="l-container">
+			<h1>TeslaWatt</h1>
+			<h2><span>Services</span></h2>
+			<ul class="l-three-box-grid">
+				<li class="l-three-box-grid-item">
+					<div class="m-services-box m-services-box-is-coming-soon">
+						<div class="m-services-box-header">
+							Hosting 30
+							<span class="m-services-box-price">$600<span class="smaller-font">/month</span></span>
+						</div><!-- end m-services-box-header -->
+						<div class="m-services-box-body">
+							<ul class="m-services-box-body-items">
+								<li>NEMA L6-30R outlet (unlimited kwh).</li>
+								<li>Internet 10/10 Mbit/s</li>
+								<li>Technical Support </li>
+								<li>Cooling</li>
+								<li>VPN access</li>
+							</ul>
+						</div><!-- end m-services-box-body -->
+						<div class="m-services-box-footer">
+							<a href="#" class="m-btn m-btn-full-width m-btn-default">
+								<i class="m-icon m-icon-15 m-icon-shop"></i> Order now
+							</a>
+						</div><!-- end m-services-box-footer -->						
+					</div><!-- end m-services-box -->
+				</li>
+				<li class="l-three-box-grid-item">
+					<div class="m-services-box">
+						<div class="m-services-box-header">
+							Hosting 30
+							<span class="m-services-box-price">$600<span class="smaller-font">/month</span></span>
+						</div><!-- end m-services-box-header -->
+						<div class="m-services-box-body">
+							<ul class="m-services-box-body-items">
+								<li>NEMA L6-30R outlet (unlimited kwh).</li>
+								<li>Internet 10/10 Mbit/s</li>
+								<li>Technical Support </li>
+								<li>Cooling</li>
+								<li>VPN access</li>
+							</ul>
+						</div><!-- end m-services-box-body -->
+						<div class="m-services-box-footer">
+							<a href="#" class="m-btn m-btn-full-width m-btn-default">
+								<i class="m-icon m-icon-15 m-icon-shop"></i> Order now
+							</a>
+						</div><!-- end m-services-box-footer -->						
+					</div><!-- end m-services-box -->
+				</li>
+				<li class="l-three-box-grid-item">
+					<div class="m-services-box m-services-box-is-coming-soon">
+						<div class="m-services-box-header">
+							Hosting 30
+							<span class="m-services-box-price">$600<span class="smaller-font">/month</span></span>
+						</div><!-- end m-services-box-header -->
+						<div class="m-services-box-body">
+							<ul class="m-services-box-body-items">
+								<li>NEMA L6-30R outlet (unlimited kwh).</li>
+								<li>Internet 10/10 Mbit/s</li>
+								<li>Technical Support </li>
+								<li>Cooling</li>
+								<li>VPN access</li>
+							</ul>
+						</div><!-- end m-services-box-body -->
+						<div class="m-services-box-footer">
+							<a href="#" class="m-btn m-btn-full-width m-btn-default">
+								<i class="m-icon m-icon-15 m-icon-shop"></i> Order now
+							</a>
+						</div><!-- end m-services-box-footer -->						
+					</div><!-- end m-services-box -->
+				</li>
+			</ul><!-- end l-three-box-grid -->
+		</div><!-- end l-container -->
+	</section>
+
+	<div class="l-section u-background-red">
+		<div class="l-container">
+			<div class="m-contact-banner">
+				<img src="images/contact-banner-bg.png" alt="Mining Rig" class="m-contact-banner-bg-image" />
+				<span class="m-banner-headline"><strong>Are you ready? </strong></span>
+				<span class="m-banner-headline">for inovative methode of bussiness.</span>
+				<a href="#" class="m-btn m-btn-default m-btn-transparent">Contact Us</a>
+			</div><!-- end m-contact-banner -->
+		</div><!-- end l-container -->
+	</div>
+
+	<section class="l-section" id="news-section">
+		<div class="l-container l-container-narrow u-text-center">
+			<h1>stay informed</h1>
+			<h2><span>on our news</span></h2>
+			<ul class="l-three-box-grid">
+				<li class="l-three-box-grid-item">
+					<div class="m-news-box">
+						<div class="m-news-box_date">
+							<span>31</span>
+							<span>Oct</span>
+						</div><!-- end m-news-box-date -->
+						<div class="m-news-box_header">
+							<img src="images/news-box-1.png" alt="News box 1" />
+						</div><!-- end m-news-box_header -->
+						<div class="m-news-box_body">
+							<h3>welcome to teslawatt</h3>
+							<div class="m-news-box_byline">
+								<a href="#" class="m-news-box_author">By Admin</a>
+								<ul class="m-news-box_feedback-list">
+									<li class="m-news-box_feedback-list-item">
+										<i class="m-news-box_feedback-list-icon m-news-box_feedback-list-icon-comment"></i> 0  
+									</li>
+									<li class="m-news-box_feedback-list-item">
+										<i class="m-news-box_feedback-list-icon m-news-box_feedback-list-icon-heart"></i> 0  
+									</li>
+								</ul><!-- end m-news-box_feedback-list -->
+							</div><!-- end m-news-box_byline -->
+							<p>
+								Lorem ipsum is simply dummy text of the printing and typesettissddfsfng industry. Lorem ipsum has been the.
+							</p>
+							<div class="u-text-right">
+								<a href="#" class="m-read-more-btn">Read more</a>
+							</div><!-- end u-text-right -->
+						</div><!-- end m-news-box_body -->
+					</div><!-- end m-news-box -->
+				</li><!-- end l-three-box-grid-item -->
+				<li class="l-three-box-grid-item">
+					<div class="m-news-box">
+						<div class="m-news-box_date">
+							<span>31</span>
+							<span>Oct</span>
+						</div><!-- end m-news-box-date -->
+						<div class="m-news-box_header">
+							<img src="images/news-box-2.png" alt="News box 2" />
+						</div><!-- end m-news-box_header -->
+						<div class="m-news-box_body">
+							<h3>welcome to teslawatt</h3>
+							<div class="m-news-box_byline">
+								<a href="#" class="m-news-box_author">By Admin</a>
+								<ul class="m-news-box_feedback-list">
+									<li class="m-news-box_feedback-list-item">
+										<i class="m-news-box_feedback-list-icon m-news-box_feedback-list-icon-comment"></i> 0  
+									</li>
+									<li class="m-news-box_feedback-list-item">
+										<i class="m-news-box_feedback-list-icon m-news-box_feedback-list-icon-heart"></i> 0  
+									</li>
+								</ul><!-- end m-news-box_feedback-list -->
+							</div><!-- end m-news-box_byline -->
+							<p>
+								Lorem ipsum is simply dummy text of the printing and typesettissddfsfng industry. Lorem ipsum has been the.
+							</p>
+							<div class="u-text-right">
+								<a href="#" class="m-read-more-btn">Read more</a>
+							</div><!-- end u-text-right -->
+						</div><!-- end m-news-box_body -->
+					</div><!-- end m-news-box -->
+				</li><!-- end l-three-box-grid-item -->
+				<li class="l-three-box-grid-item">
+					<div class="m-news-box">
+						<div class="m-news-box_date">
+							<span>31</span>
+							<span>Oct</span>
+						</div><!-- end m-news-box-date -->
+						<div class="m-news-box_header">
+							<img src="images/news-box-3.png" alt="News box 3" />
+						</div><!-- end m-news-box_header -->
+						<div class="m-news-box_body">
+							<h3>welcome to teslawatt</h3>
+							<div class="m-news-box_byline">
+								<a href="#" class="m-news-box_author">By Admin</a>
+								<ul class="m-news-box_feedback-list">
+									<li class="m-news-box_feedback-list-item">
+										<i class="m-news-box_feedback-list-icon m-news-box_feedback-list-icon-comment"></i> 0  
+									</li>
+									<li class="m-news-box_feedback-list-item">
+										<i class="m-news-box_feedback-list-icon m-news-box_feedback-list-icon-heart"></i> 0  
+									</li>
+								</ul><!-- end m-news-box_feedback-list -->
+							</div><!-- end m-news-box_byline -->
+							<p>
+								Lorem ipsum is simply dummy text of the printing and typesettissddfsfng industry. Lorem ipsum has been the.
+							</p>
+							<div class="u-text-right">
+								<a href="#" class="m-read-more-btn">Read more</a>
+							</div><!-- end u-text-right -->
+						</div><!-- end m-news-box_body -->
+					</div><!-- end m-news-box -->
+				</li><!-- end l-three-box-grid-item -->
+			</ul><!-- end l-three-box-grid -->
+			<a href="#" class="m-btn m-btn-default">Read all news</a>
+		</div><!-- end l-container -->
+	</section>
+
+	<div class="l-section m-personell-banner" id="jobs-section">
+		<div class="l-container l-container-narrow">
+			<div class="m-personell-banner-inner u-text-right">
+				<img src="images/personnel-banner-image.png" alt="Mining Rig" class="m-personell-banner-bg-image" />
+				<span class="m-banner-headline"><strong>We Are Seeking For Highly Skilled Personnel</strong></span>
+				<p class="u-color-white">
+					We hire extraordinary people and provide them with the benefits and opportunities they need to develop both personally and professionally.
+				</p>
+				<a href="#" class="m-btn m-btn-default m-btn-transparent">Available jobs</a>
+			</div><!-- end m-contact-banner -->
+		</div><!-- end l-container -->
+	</div>
+
+	<section class="l-section l-section-smaller">
+		<h1>TeslaWatt</h1>
+		<h2><span>Services</span></h2>
+		<div class="m-gallery-slider-wrapper">
+			<ul class="m-gallery-slider">
+				<li>
+					<a data-fancybox="gallery" href="images/gallery/gallery-item-1.png">
+						<img src="images/gallery/gallery-item-1.png" alt="Gallery item 1" />
+					</a>
+				</li>
+				<li>
+					<a data-fancybox="gallery" href="images/gallery/gallery-item-2.png">
+						<img src="images/gallery/gallery-item-2.png" alt="Gallery item 2" />
+					</a>
+				</li>
+				<li>
+					<a data-fancybox="gallery" href="images/gallery/gallery-item-3.png">
+						<img src="images/gallery/gallery-item-3.png" alt="Gallery item 3" />
+					</a>
+				</li>
+				<li>
+					<a data-fancybox="gallery" href="images/gallery/gallery-item-4.png">
+						<img src="images/gallery/gallery-item-4.png" alt="Gallery item 4" />
+					</a>
+				</li>
+				<li>
+					<a data-fancybox="gallery" href="images/gallery/gallery-item-1.png">
+						<img src="images/gallery/gallery-item-1.png" alt="Gallery item 1" />
+					</a>
+				</li>
+				<li>
+					<a data-fancybox="gallery" href="images/gallery/gallery-item-2.png">
+						<img src="images/gallery/gallery-item-2.png" alt="Gallery item 2" />
+					</a>
+				</li>
+				<li>
+					<a data-fancybox="gallery" href="images/gallery/gallery-item-3.png">
+						<img src="images/gallery/gallery-item-3.png" alt="Gallery item 3" />
+					</a>
+				</li>
+				<li>
+					<a data-fancybox="gallery" href="images/gallery/gallery-item-4.png">
+						<img src="images/gallery/gallery-item-4.png" alt="Gallery item 4" />
+					</a>
+				</li>
+			</ul><!-- end m-gallery-slider -->
+		</div><!-- end m-gallery-slider-wrapper -->
+	</section>
+
+	<div class="l-section l-section-smaller u-small-padding-bottom u-contact-form-bg" id="contact-section">
+		<div class="l-container l-container-narrow">
+			<div class="l-width-half l-offset-left-half">
+				<div class="m-contact">
+					<span class="m-contact-headline">we will be glad to </span>
+					<span class="m-contact-headline"><strong>hear from you</strong></span>
+					<ul class="m-contact-details">
+						<li class="m-contact-details-item">
+							<i class="m-icon m-icon-17 m-icon-location-white"></i><a href="#">1231 Service DR, Unit B, Gardnerville,  Nevada 89410</a>
+						</li>
+						<li class="m-contact-details-item">
+							<i class="m-icon m-icon-17 m-icon-phone-white"></i><a href="#">+381 11 234 567</a>
+						</li>
+						<li class="m-contact-details-item">
+							<i class="m-icon m-icon-17 m-icon-email-white"></i><a href="#">example@teslawatt.com</a>
+						</li>
+					</ul><!-- end contact-details -->
+					<form class="m-contact-form">
+						<input type="text" placeholder="Name" name="name" />
+						<input type="email" placeholder="Email" name="email" />
+						<input type="text" placeholder="Subject" name="subject" />
+						<textarea placeholder="Message"></textarea>
+						<input type="submit" name="Send" value="Send message" class="m-btn m-btn-default m-btn-full-width" />
+					</form>
+				</div><!-- end m-contact -->
+			</div><!-- end l-width-half -->
+		</div><!-- end l-container -->
+	</div><!-- end l-section -->
+
+	<footer class="m-footer u-text-center">
+		<div class="m-footer-content">
+			<img src="images/footer-logo.png" alt="TeslaWatt" class="m-footer-logo" />
+			<p>
+				We hire extraordinary people and provide them with the benefits and opportunities they need to develop both personally and professionally.
+			</p>
+			<ul class="m-social-icons-secondary">
+				<li>
+					<a href="#"><i class="m-icon m-icon-red m-icon-27 m-icon-red-fb"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="m-icon m-icon-red m-icon-27 m-icon-red-linkedin"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="m-icon m-icon-red m-icon-27 m-icon-red-instagram"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="m-icon m-icon-red m-icon-27 m-icon-red-twitter"></i></a>
+				</li>
+			</ul><!-- end m-social-icons-secondary -->
+		</div><!-- end m-footer-content -->
+		<div class="m-footer-bottom u-text-center">
+			<p>© 2018 Teslawatt</p>
+		</div><!-- end m-footer-bottom -->
+	</footer>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="js/master.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.m-gallery-slider').bxSlider({
+			minSlides: 1,
+			maxSlides: 10,
+			slideWidth: 462,
+			slideMargin: 11,
+			ticker: true,
+			speed: 50000,
+			tickerHover: true
+		});
+	});
+</script>
 </body>
 </html>
