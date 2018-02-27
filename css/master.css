@@ -637,6 +637,10 @@ img {
     font-size: 32px;
   }
 
+  .m-hero-parallax-clouds {
+    bottom: -90px;
+  }
+
 }
 
 /* Section Module Styling */
@@ -1491,7 +1495,8 @@ img {
   bottom: 0;
   left: 0;
   height: 1px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   background: #C4C4C4;
 }
 
@@ -1518,6 +1523,31 @@ img {
 
 .m-job-posts_hidden-text > p:last-child {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+
+  .m-job-posts_item {
+    max-width: 100%;
+  }
+
+  .m-job-posts_buttons .m-btn-default {
+    padding: 15px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .m-job-posts_buttons {
+    margin-top: -20px;
+  }
+
+  .m-job-posts_buttons a.m-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+
 }
 
 /* Regular list Module Styling */
