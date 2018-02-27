@@ -1125,6 +1125,11 @@ img {
   transform: translate(-50%, -50%) scale(1.2, 1.2);
 }
 
+.m-news-box.full-width:hover .m-news-box_image-cropper > img {
+  transform: translate(-50%, -50%) scale(1, 1);
+}
+
+
 .m-news-box_header {
   padding: 30px 25px 20px;
 }
@@ -1239,7 +1244,6 @@ img {
 
 .full-width .m-news-box_image-cropper > img  {
   position: relative;
-  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
