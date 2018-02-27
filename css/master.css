@@ -1210,8 +1210,6 @@ img {
   background: url(img/carrot-red-icon.png) no-repeat center right;
 }
 
-/* News Page Styling */
-
 .full-width {
   width: 100%;
   max-width: 800px;
@@ -1600,6 +1598,8 @@ img {
 .m-job-posts_hidden-text {
   display: none;
   margin: 30px 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 
 .m-job-posts_hidden-text > p:first-child {
