@@ -41,6 +41,7 @@ html, body {
 }
 
 a {
+  color: #a31e22;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
@@ -948,9 +949,11 @@ img {
 
 .m-services-box {
   position: relative;
+  padding-bottom: 110px;
   margin: 0 auto;
   max-width: 600px;
   border-radius: 5px;
+  background: #fff;
   text-align: center;
   transform: scale(0.95, 0.95);
   transition: 0.3s all ease-in-out;
@@ -1028,7 +1031,7 @@ img {
 }
 
 .m-services-box-body {
-  padding: 30px 10px 110px;
+  padding: 30px 10px 30px;
 }
 
 .m-services-box-body-items {
@@ -1053,6 +1056,10 @@ img {
 
 .m-services-box_full-width {
   padding: 0 25px;
+}
+
+.m-services-box_no-footer {
+  padding-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -1295,6 +1302,19 @@ img {
 
 }
 
+/* General Banner Styling */
+
+.m-banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.m-banner_inner {
+
+}
+
 /* Contact banner module styling */
 
 .m-contact-banner {
@@ -1341,8 +1361,7 @@ img {
 /* Personell Banner Module Styling  */
 
 .m-personell-banner {
-  background: url(img/personnel-bg.jpg) no-repeat center;
-  background-size: cover;
+  background-image: url(img/personnel-bg.jpg);
 }
 
 .m-personell-banner-inner {
@@ -1362,6 +1381,10 @@ img {
   position: absolute;
   right: -200px;
   bottom: -100px;
+}
+
+.m-personell-banner-bg-image-inner {
+  bottom: -60px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -1387,13 +1410,16 @@ img {
     bottom: auto;
   }  
 
+  .m-personell-banner-bg-image-inner {
+    margin-bottom: 30px;
+  }
+
 }
 
 /* Services Banner Module Styling  */
 
 .m-services-banner {
-  background: url(img/services-bg.jpg) no-repeat center;
-  background-size: cover;
+  background-image: url(img/services-bg.jpg);
 }
 
 .m-services-banner-inner {
