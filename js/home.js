@@ -20,7 +20,7 @@ function mainNavClickControl(e) {
 		targetId = $(this).attr('href')
 		extraPadding = 0;
 
-	if ( e.data.extraPadding != undefined ) {
+	if ( e.data != undefined && e.data.extraPadding != undefined ) {
 		extraPadding = e.data.extraPadding;
 	}
 
