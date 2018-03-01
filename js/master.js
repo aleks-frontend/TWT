@@ -43,10 +43,10 @@ $('.js-job-post-hidden-toggle').on('click', function(e) {
 
 	if ( hiddenText.is(':visible') ) {
 		$this.text('Read more');
-		hiddenText.slideUp(300);
+		hiddenText.slideUp(600);
 	} else {
 		$this.text('Read less');
-		hiddenText.slideDown(300);
+		hiddenText.slideDown(600);
 	}
 
 	e.preventDefault();
