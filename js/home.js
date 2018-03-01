@@ -4,6 +4,7 @@ var isRealScroll = true;
 $(window).on('scroll', mainNavScrollControl).trigger('scroll');
 $('.m-main-navigation-item').on('click', mainNavClickControl);
 $('.js-contact-us-trigger').on('click', mainNavClickControl);
+$('.js-about-us-trigger').on('click', mainNavClickControl);
 
 /* Hover Effect for the Services Boxes Section */
 $('.m-services-box').on('mouseenter', function() {

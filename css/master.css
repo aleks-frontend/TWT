@@ -1333,7 +1333,7 @@ img {
 
 .m-banner-headline {
   display: block;
-  font-size: 31px;
+  font-size: 24px;
   color: #fdfdfd;
   line-height: 1.1em;
   text-transform: uppercase;
@@ -1947,4 +1947,8 @@ img {
 
 .has-no-scroll {
   overflow: hidden;
+}
+
+.u-no-min-height {
+  min-height: auto;
 }
