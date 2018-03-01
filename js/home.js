@@ -4,7 +4,7 @@ var isRealScroll = true;
 $(window).on('scroll', mainNavScrollControl).trigger('scroll');
 $('.m-main-navigation-item').on('click', mainNavClickControl);
 $('.js-contact-us-trigger').on('click', mainNavClickControl);
-$('.js-about-us-trigger').on('click', mainNavClickControl);
+$('.js-about-us-trigger').on('click', {extraPadding: 100}, mainNavClickControl);
 
 /* Hover Effect for the Services Boxes Section */
 $('.m-services-box').on('mouseenter', function() {
@@ -17,7 +17,12 @@ $('.m-services-box').on('mouseenter', function() {
 
 function mainNavClickControl(e) {
 	var $this = $(this),
-		targetId = $(this).attr('href');
+		targetId = $(this).attr('href')
+		extraPadding = 0;
+
+	if ( e.data.extraPadding != undefined ) {
+		extraPadding = e.data.extraPadding;
+	}
 
 	$('.m-main-navigation-item').removeClass('is-active-m-main-navigation-item');
 
@@ -25,7 +30,7 @@ function mainNavClickControl(e) {
 
 	isRealScroll = false;
 	$('html, body').animate({
-		scrollTop: $(targetId).position().top
+		scrollTop: $(targetId).position().top - extraPadding
 	}, {
 		duration: 1000,
 		easing: 'swing',
