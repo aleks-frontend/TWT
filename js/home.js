@@ -5,6 +5,13 @@ $(window).on('scroll', mainNavScrollControl).trigger('scroll');
 $('.m-main-navigation-item').on('click', mainNavClickControl);
 $('.js-contact-us-trigger').on('click', mainNavClickControl);
 
+/* Dynamically setting the height of the hero section */
+$(window).on('resize', function() {
+	var winHeight = $(window).height();
+
+	$('.m-hero').css('height', winHeight -130);
+}).trigger('resize');
+
 /* Hover Effect for the Services Boxes Section */
 $('.m-services-box').on('mouseenter', function() {
 	var $this = $(this),
