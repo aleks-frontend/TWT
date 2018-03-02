@@ -325,8 +325,6 @@ img {
   width: 190px;
   height: 35px;
   transform: translateY(-50%);
-  background: url(img/logo-new.png) no-repeat center;
-  background-size: 189px 35px;
 }
 
 /* Hamburger menu button Module styling */

@@ -1,7 +1,7 @@
 <?php
     // Your Email
-    $recipient = "aleksfrontend@gmail.com"; // PLEASE SET YOUR EMAIL ADDRESS
-    $sender = 'aleksfrontend@gmail.com'; // use the hosts domain name
+    $recipient = "gojkovic-frontend@hotmail.com"; // PLEASE SET YOUR EMAIL ADDRESS
+    $sender = 'gojkovic-frontend@hotmail.com'; // use the hosts domain name
     // Check $recipient
     if($recipient === '') {
         returnAndExitAjaxResponse(
@@ -38,7 +38,7 @@
     $subject = "New email from Request Demo form";
 
     // Build Message
-    $email_content .= "This email address requested a demo: $email<br /><br />";
+    $email_content .= $_POST["emailcontent"];
 
 // Check if sent
 try {
