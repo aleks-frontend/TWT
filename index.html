@@ -41,7 +41,7 @@
 			</div><!-- end l-container -->
 		</div><!-- end l-main-header-top -->
 		<div class="l-container">
-			<a href="#" class="m-logo"><img src="images/logo.png" alt="Logo" /></a>
+			<a href="#" class="m-logo"></a>
 			<div class="m-hamburger-menu">
 				<span class="m-hamburger-menu-bar"></span>
 				<span class="m-hamburger-menu-bar"></span>
@@ -114,7 +114,7 @@
 				<li class="m-steps-graph-step">
 					<span class="m-steps-graph-step-label">Step 1</span><!-- end m-steps-graph-step-label -->
 					<div class="m-steps-graph-step-illustration">
-						<img src="images/package-icon6.png" alt="Step One Illustration" />
+						<img src="images/package-icon.png" alt="Step One Illustration" />
 					</div><!-- end m-steps-graph-step-illustration -->
 					<div class="m-steps-graph-step-description">
 						 Choose the type of service that best suits your business needs
@@ -393,18 +393,18 @@
 					<span class="m-contact-headline"><strong>hear from you</strong></span>
 					<ul class="m-contact-details">
 						<li class="m-contact-details-item">
-							<i class="m-icon m-icon-17 m-icon-location-white"></i><a href="#">1231 Service DR, Unit B, Gardnerville,  Nevada 89410</a>
+							<i class="m-icon m-icon-17 m-icon-location-gray"></i><a href="#">1231 Service DR, Unit B, Gardnerville,  Nevada 89410</a>
 						</li>
 						<li class="m-contact-details-item">
-							<i class="m-icon m-icon-17 m-icon-phone-white"></i><a href="#">(408) 510 1274</a>
+							<i class="m-icon m-icon-17 m-icon-phone-gray"></i><a href="#">(408) 510 1274</a>
 						</li>
 						<li class="m-contact-details-item">
-							<i class="m-icon m-icon-17 m-icon-email-white"></i><a href="#">info@teslawatt.com</a>
+							<i class="m-icon m-icon-17 m-icon-email-gray"></i><a href="#">info@teslawatt.com</a>
 						</li>
 					</ul><!-- end contact-details -->
 					<form class="m-contact-form">
 						<input type="text" placeholder="Name" name="name" />
-						<input type="email" placeholder="Email" name="email" />
+						<input type="email" id="emailaddress" placeholder="Email" name="email" />
 						<input type="text" placeholder="Subject" name="subject" />
 						<textarea placeholder="Message"></textarea>
 						<input type="submit" name="Send" value="Send message" class="m-btn m-btn-default m-btn-full-width" />
@@ -463,6 +463,75 @@
 			speed: 50000,
 			tickerHover: true
 		});
+
+		/* Testing the contact form email sending */
+	    $('form.m-contact-form').on('submit', function(){
+	    	var email = $('#emailaddress').val();
+	    	
+	    	// $('form.demo-request').find('p, h2').animate({
+	    	// 	opacity: 0
+	    	// });
+
+	    	// $('.loading-overlay').fadeIn(300);
+	    	
+	    	$.ajax({
+				type: 'POST',
+				url:'sendemail.php',
+				data: { email : email },
+				dataType: 'json',
+				success: function(result) {
+					// setTimeout(function(){
+					// 	$('.form-wrapper h2').html('Thank you!');
+					// 	$('.form-wrapper p').html('We have received your request and will respond very soon.');
+					// 	$('form.demo-request').fadeOut(300, function(){
+					// 		$('.loading-overlay').fadeOut(300, function(){
+					// 			$('.form-wrapper').find('h2, p').animate({
+			  //           			'opacity': 1
+			  //           		},300);
+					// 		});								
+					// 	});							
+					// 	$('.got-it').fadeIn(300);				            										
+					// }, 1000);
+
+					// $('.got-it').on('click', function(){
+					// 	$(this).fadeOut(300, function(){
+					// 		$('form.demo-request').fadeIn(300);
+					// 		$('form.demo-request').find('input[type="text"]').val('');
+					// 		$('.form-wrapper h2').html('Request a Demo');
+					// 		$('.form-wrapper p').html('Start a conversation and see how BlueLyte can help your organization.');								
+					// 	});
+					// });
+					alert('Poslato!');
+
+				},
+				error: function(result) {
+
+					// setTimeout(function(){
+					// 	$('.form-wrapper h2').html('Ooops...');
+					// 	$('.form-wrapper p').html('Something went wrong, please double check you entered a valid email address and try again.');
+					// 	$('form.demo-request').fadeOut(300, function(){
+					// 		$('.loading-overlay').fadeOut(300, function(){
+					// 			$('.form-wrapper').find('h2, p').animate({
+			  //           			'opacity': 1
+			  //           		},300);
+					// 		});								
+					// 	});							
+					// 	$('.try-again').fadeIn(300);				            										
+					// }, 1000);
+
+					// $('.try-again').on('click', function(){
+					// 	$(this).fadeOut(300, function(){
+					// 		$('form.demo-request').fadeIn(300);
+					// 		$('form.demo-request').find('input[type="text"]').val('');
+					// 		$('.form-wrapper h2').html('Request a Demo');
+					// 		$('.form-wrapper p').html('Start a conversation and see how BlueLyte can help your organization.');								
+					// 	});
+					// });
+					alert('Error!');
+				}
+			});
+			return false;
+	    });		
 	});
 </script>
 <!-- Adding Google Maps API -->
@@ -472,87 +541,7 @@
     var map = new google.maps.Map(document.getElementById('map-container'), {
       zoom: 16,
       center: uluru,
-      disableDefaultUI: true,
-      styles: [
-            {elementType: 'geometry', stylers: [{color: '#333333'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#333333'}]},
-            {elementType: 'labels.text.fill', stylers: [{color: '#4f4f4f'}]},
-            {
-              featureType: 'administrative.locality',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#333333'}]
-            },
-            {
-              featureType: 'poi',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#4f4f4f'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'geometry',
-              stylers: [{color: '#333333'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#4f4f4f'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry',
-              stylers: [{color: '#282828'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#282828'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#4f4f4f'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry',
-              stylers: [{color: '#282828'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#282828'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#282828'}]
-            },
-            {
-              featureType: 'transit',
-              elementType: 'geometry',
-              stylers: [{color: '#282828'}]
-            },
-            {
-              featureType: 'transit.station',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'geometry',
-              stylers: [{color: '#2b2b2b'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#2b2b2b'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.stroke',
-              stylers: [{color: '#2b2b2b'}]
-            }
-          ]
+      disableDefaultUI: false 
     });
     var marker = new google.maps.Marker({
       position: uluru,
