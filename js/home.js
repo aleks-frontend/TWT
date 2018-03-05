@@ -7,9 +7,18 @@ $('.js-contact-us-trigger').on('click', mainNavClickControl);
 
 /* Dynamically setting the height of the hero section */
 $(window).on('resize', function() {
-	var winHeight = $(window).height();
+	var winHeight = $(window).height(),
+		winWidth = $(window).width();
 
-	$('.m-hero').css('height', winHeight -130);
+	if ( winWidth > 768 ) {
+		$('.m-hero')
+			.css('height', winHeight - 130)
+			.removeClass('m-hero-is-on-mobile');
+	} else {
+		$('.m-hero')
+			.css('height', winHeight)
+			.addClass('m-hero-is-on-mobile');
+	}
 }).trigger('resize');
 
 /* Hover Effect for the Services Boxes Section */
@@ -59,10 +68,10 @@ function headerStyleScrollChange() {
 	
 		if ( $(this).scrollTop() > 70 && !$('.l-main-header').hasClass('is-mobile-layout') ) {
 			$('.l-main-header-top').slideUp(300);
-			$('.l-main-header').addClass('l-main-header-is-scrolled')
+			$('.l-main-header').addClass('l-main-header-is-scrolled');
 		} else {
 			$('.l-main-header-top').slideDown(300);
-			$('.l-main-header').removeClass('l-main-header-is-scrolled')
+			$('.l-main-header').removeClass('l-main-header-is-scrolled');
 		}		
 	
 }

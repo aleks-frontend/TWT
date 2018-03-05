@@ -334,7 +334,7 @@ img {
   position: absolute;
   right: 10px;
   top: 10px;
-  width: 60px;
+  width: 50px;
   height: 35px;
   z-index: 999;
 }
@@ -657,21 +657,26 @@ img {
 
 }
 
-@media screen and (max-width: 720px) {
+/* Responsive Layout for mobile - '.m-hero-is-on-mobile' class added via Javascript */
 
-  .m-hero-content {
-    top: 15%;
-  }
-
-  .m-hero-content-headline {
-    font-size: 32px;
-  }
-
-  .m-hero-parallax-rocket {
-    bottom: 0;
-  }
-
+.m-hero-is-on-mobile .m-hero-content {
+  top: 15%;
 }
+
+.m-hero-is-on-mobile .m-hero-content-headline {
+  font-size: 32px;
+}
+
+.m-hero-is-on-mobile .m-hero-parallax-rocket {
+  bottom: 0;
+  max-height: 50%;
+}
+
+.m-hero-is-on-mobile .m-hero-parallax-clouds {
+  bottom: 0;
+  height: 150px;
+}
+
 
 /* Section Module Styling */
 
