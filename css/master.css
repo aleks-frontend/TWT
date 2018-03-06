@@ -334,7 +334,7 @@ img {
   position: absolute;
   right: 10px;
   top: 10px;
-  width: 50px;
+  width: 43px;
   height: 35px;
   z-index: 999;
 }
@@ -422,6 +422,19 @@ img {
   color: #a31e22;
 }
 
+
+.mobile-menu-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0;
+  z-index: 997;
+}
+
 @media screen and (max-width: 800px) {
 
   .l-main-header-top {
@@ -472,6 +485,10 @@ img {
   .m-main-navigation ul li a:hover {
     color: #fff;
     border-left: 5px solid #a31e22;
+  }
+
+  .mobile-menu-overlay {
+    display: block;
   }
 
 }
@@ -1961,17 +1978,6 @@ img {
 
 .u-padding-top-none {
   padding-top: 0;
-}
-
-.test-overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #000;
-  opacity: 0;
-  z-index: 997;
 }
 
 .has-no-scroll {

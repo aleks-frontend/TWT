@@ -43,6 +43,14 @@ function mainNavClickControl(e) {
 
 	$this.addClass('is-active-m-main-navigation-item');
 
+	if ($('.m-main-navigation').hasClass('is-scrolled-in')) {
+		$('.m-main-navigation').removeClass('is-scrolled-in');
+		$('.mobile-menu-overlay').fadeOut(300, function() {
+			$(this).remove();
+		});
+		$('.m-hamburger-menu').removeClass('is-in-x-mode');
+	}
+
 	isRealScroll = false;
 	$('html, body').animate({
 		scrollTop: $(targetId).position().top - extraPadding

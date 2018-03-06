@@ -13,25 +13,22 @@ $('.m-hamburger-menu').on('click', function() {
 	if ( !mainNavigation.hasClass('is-scrolled-in') ) {
 		mainNavigation.addClass('is-scrolled-in');
 		hamburgerMenuBtn.addClass('is-in-x-mode');
-		mainNavigation.after('<div class="test-overlay"></div>')
-		// $('html, body').addClass('has-no-scroll');
-		$('.test-overlay').animate({
+		mainNavigation.after('<div class="mobile-menu-overlay"></div>')
+		$('.mobile-menu-overlay').animate({
 			opacity: 0.8
 		});
 
-		$('.test-overlay').on('click', function() {
+		$('.mobile-menu-overlay').on('click', function() {
 			mainNavigation.removeClass('is-scrolled-in');
 			hamburgerMenuBtn.removeClass('is-in-x-mode');
-			// $('html, body').removeClass('has-no-scroll');
-			$('.test-overlay').fadeOut(300, function() {
+			$('.mobile-menu-overlay').fadeOut(300, function() {
 				$(this).remove();
 			});
 		})
 	} else {
 		mainNavigation.removeClass('is-scrolled-in');
 		hamburgerMenuBtn.removeClass('is-in-x-mode');
-		// $('html, body').removeClass('has-no-scroll');
-		$('.test-overlay').fadeOut(300, function() {
+		$('.mobile-menu-overlay').fadeOut(300, function() {
 			$(this).remove();
 		});
 	}
