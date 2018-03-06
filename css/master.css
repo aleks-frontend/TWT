@@ -1381,8 +1381,7 @@ img {
   display: block;
   font-size: 24px;
   color: #fdfdfd;
-  line-height: 1.1em;
-  text-transform: uppercase;
+  line-height: 1.2em;
 }
 
 .m-banner-headline + .m-btn {
@@ -1547,6 +1546,10 @@ img {
 
 /* Contact Form Section Styling */
 
+.m-contact {
+  padding-left: 30px;
+}
+
 .m-contact-headline {
   display: block;
   margin-bottom: 10px;
@@ -1618,6 +1621,10 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  
+  .m-contact {
+    padding-left: 0;
+  }
 
   #contact-section {
     padding-bottom: 0;
@@ -1970,6 +1977,10 @@ img {
 
 .u-text-uppercase {
   text-transform: uppercase;
+}
+
+.u-text-initial {
+  text-transform: initial;
 }
 
 .u-margin-top-big {
