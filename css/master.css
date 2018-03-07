@@ -1555,7 +1555,7 @@ img {
   margin-bottom: 10px;
   font-size: 20px;
   line-height: 1em;
-  color: #4d4d4d;
+  color: #fff;
   text-transform: uppercase;
 }
 
@@ -1579,7 +1579,7 @@ img {
 
 .m-contact-details-item > a {
   font-size: 13px;
-  color: #4d4d4d;
+  color: #fff;
 }
 
 .m-contact-form input[type="text"],
@@ -1591,7 +1591,7 @@ img {
   width: 100%;
   height: 35px;
   font-size: 13px;
-  color: #4d4d4d;
+  color: #fff;
   background: transparent;
   border: 1px solid #767676;
   border-radius: 5px;
@@ -1897,6 +1897,7 @@ img {
 
 .m-basic-inner-page-content > h2 {
   font-size: 18px;
+  margin: 40px 0 20px 0;
 }
 
 .m-basic-inner-page-content > p,
@@ -1948,7 +1949,7 @@ img {
 }
 
 .u-contact-form-bg {
-  background: #f2f1f1;
+  background: #333333;
 }
 
 .u-font-bold {

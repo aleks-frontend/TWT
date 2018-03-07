@@ -74,7 +74,7 @@
 	<div class="l-fullscreen m-hero" id="home-section">
 		<div class="l-container m-hero-container">
 			<div class="m-hero-content">
-				<span class="m-hero-content-headline u-color-red"><strong>Crypto Mining</strong></span>
+				<span class="m-hero-content-headline u-color-red">Crypto Mining</span>
 				<span class="m-hero-content-headline">Hosting Services</span>
 				<a href="services.html" class="m-btn m-btn-default">More details</a>
 			</div><!-- end m-hero-content -->
@@ -395,13 +395,13 @@
 					<span class="m-contact-headline"><strong>hear from you</strong></span>
 					<ul class="m-contact-details">
 						<li class="m-contact-details-item">
-							<i class="m-icon m-icon-17 m-icon-location-gray"></i><a href="#">1231 Service Dr, Unit B, Gardnerville,  Nevada 89410</a>
+							<i class="m-icon m-icon-17 m-icon-location-white"></i><a href="#">1231 Service Dr, Unit B, Gardnerville,  Nevada 89410</a>
 						</li>
 						<li class="m-contact-details-item">
-							<i class="m-icon m-icon-17 m-icon-phone-gray"></i><a href="#">(408) 510 1274</a>
+							<i class="m-icon m-icon-17 m-icon-phone-white"></i><a href="#">(408) 510 1274</a>
 						</li>
 						<li class="m-contact-details-item">
-							<i class="m-icon m-icon-17 m-icon-email-gray"></i><a href="#">office@teslawatt.com</a>
+							<i class="m-icon m-icon-17 m-icon-email-white"></i><a href="#">office@teslawatt.com</a>
 						</li>
 					</ul><!-- end contact-details -->
 					<form class="m-contact-form">
@@ -504,7 +504,174 @@
     var map = new google.maps.Map(document.getElementById('map-container'), {
       zoom: 16,
       center: uluru,
-      disableDefaultUI: false 
+      disableDefaultUI: false,
+      styles: [
+      {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 40
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 18
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 19
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    }
+      ] 
     });
     var marker = new google.maps.Marker({
       position: uluru,
