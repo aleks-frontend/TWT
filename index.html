@@ -469,13 +469,7 @@
 		/* Testing the contact form email sending */
 	    $('form.m-contact-form').on('submit', function(){
 	    	var email = $('#emailaddress').val(),
-	    		emailcontent = $('#emailcontent').val();
-	    	
-	    	// $('form.demo-request').find('p, h2').animate({
-	    	// 	opacity: 0
-	    	// });
-
-	    	// $('.loading-overlay').fadeIn(300);
+	    		emailcontent = $('#emailcontent').val();	    	
 	    	
 	    	$.ajax({
 				type: 'POST',
@@ -486,7 +480,7 @@
 				},
 				dataType: 'json',
 				success: function(result) {
-					// alert('Poslato!');
+					// alert('Success!');
 
 				},
 				error: function(result) {
