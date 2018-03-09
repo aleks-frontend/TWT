@@ -1,7 +1,7 @@
 <?php
     // Your Email
-    $recipient = "gojkovic-frontend@hotmail.com"; // PLEASE SET YOUR EMAIL ADDRESS
-    $sender = 'gojkovic-frontend@hotmail.com'; // use the hosts domain name
+    $recipient = "office@teslawatt.com"; // PLEASE SET YOUR EMAIL ADDRESS
+    $sender = 'office@teslawatt.com'; // use the hosts domain name
     // Check $recipient
     if($recipient === '') {
         returnAndExitAjaxResponse(
